@@ -49,6 +49,9 @@ install:
       sudo apt-get install python3-dbg
       virtualenv -p python3-dbg /tmp/env
       . /tmp/env/bin/activate
+    else
+      virtualenv -p python3 /tmp/env
+      . /tmp/env/bin/activate
     fi
   - pip3 install -r requirements-test.txt
 
