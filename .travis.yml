@@ -59,6 +59,7 @@ script:
   - pip3 install .
   - pytest tests
   - pushd docs
+  - pip3 freeze
   - make doctest -e PYTHON=$(which python3)
   - popd
   # cibuildwheel's docker might get confused and throw an ImportMismatchError,
